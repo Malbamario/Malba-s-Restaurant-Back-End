@@ -4,7 +4,8 @@
   "description": "This is the web server for malba' restaurant website",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start-test": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "author": "Malbamario",
   "license": "ISC",

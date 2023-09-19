@@ -19,14 +19,14 @@ const writeData = (data) => {
     }
 }
 
-const addData = (item=null, item_trans=null) => {
+const addData = (item=undefined, item_trans=undefined) => {
     const data = readData();
     if(item) data.items.push(item);
     if(item_trans) data.items_trans.push(item_trans);
     return writeData(data);
 }
 
-const updateData = (item=null, item_trans=null) => {
+const updateData = (item=undefined, item_trans=undefined) => {
     const data = readData();
     if(item){
         data.items.forEach((item, index) => {

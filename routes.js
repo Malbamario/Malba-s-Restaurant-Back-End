@@ -1,4 +1,5 @@
-const {addItemHandler, getItemHandler, updateItemHandler, deleteItemHandler} = require('./handler.js');
+const { addItemHandler, getItemHandler, updateItemHandler, deleteItemHandler,
+    addItemTransHandler, getAllItemTransHandler, updateItemTransHandler, deleteItemTransHandler } = require('./handler.js');
 
 const routes = [
     {
@@ -20,6 +21,26 @@ const routes = [
         method: 'DELETE',
         path: '/items/{id}',
         handler: deleteItemHandler,
+    },
+    {
+        method: 'POST',
+        path: '/items_trans',
+        handler: addItemTransHandler,
+    },
+    {
+        method: 'GET',
+        path: '/items_trans',
+        handler: getAllItemTransHandler,
+    },
+    {
+        method: 'PUT',
+        path: '/items_trans',
+        handler: updateItemTransHandler,
+    },
+    {
+        method: 'DELETE',
+        path: '/items_trans/{id}',
+        handler: deleteItemTransHandler,
     }
 ];
 
