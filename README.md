@@ -4,16 +4,16 @@ Ini merupakan projek back-end dari Malba's Restaurant yang Front-End-nya digunak
 
 Berikut to do list yang perlu dikerjakan.
 
-- [ ] struktur data item dan transaksi item
-- [ ] daftar HTTP response yang akan diberikan
-  - [ ] add Item
-  - [ ] get Item
-  - [ ] update Item
-  - [ ] delete Item
-  - [ ] add Item transactions
-  - [ ] get Item transactions
+- [x] struktur data item dan transaksi item
+- [x] daftar HTTP response yang akan diberikan
+  - [x] add Item
+  - [x] get Item
+  - [x] update Item
+  - [x] delete Item
+  - [x] add Item transactions
+  - [x] get Item transactions
   - [ ] update Item transactions (restricted)
   - [ ] delete Item transactions (restricted)
-- [ ] Testing dengan postman saat masih di local
+- [x] Testing dengan postman saat masih di local
 - [ ] deploy ke EC2 instance di AWS
 - [ ] Testing dengan postman saat sudah di server AWS
