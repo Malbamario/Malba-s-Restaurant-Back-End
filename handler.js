@@ -61,7 +61,7 @@ const deleteItemHandler = (request, h) => {
     const {id} = request.params;
     const data = readData();
     data.items = data.items.filter(el => el.id!==id);
-
+    data.items_trans = data.items_trans.filter(el => el.idItem!==id);
     writeData(data);
     const response = h.response({
         status: 'success',
