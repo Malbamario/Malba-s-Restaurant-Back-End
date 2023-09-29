@@ -2,13 +2,18 @@ const { nanoid } = require('nanoid');
 const { readData, addData, updateData, writeData } = require('./data.js');
 
 const addItemHandler = (request, h) => {
-    const { name, imgUrl, unit, keterangan } = request.payload;
+    // const { name, imgUrl, unit, keterangan } = request.payload;
+    const { name, unit, keterangan } = request.payload;
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
 
+    // const item = {
+    //     id, name, imgUrl, unit, keterangan, createdAt, updatedAt
+    // };
+
     const item = {
-        id, name, imgUrl, unit, keterangan, createdAt, updatedAt
+        id, name, unit, keterangan, createdAt, updatedAt
     };
 
     addData(item);
@@ -42,11 +47,16 @@ const getItemHandler = (request, h) => {
 }
 
 const updateItemHandler = (request, h) => {
-    const { id, name, imgUrl, keterangan } = request.payload;
+    // const { id, name, imgUrl, keterangan } = request.payload;
+    const { id, name, keterangan } = request.payload;
     const updatedAt = new Date().toISOString();
 
+    // const item = {
+    //     id, name, imgUrl, keterangan, updatedAt
+    // };
+
     const item = {
-        id, name, imgUrl, keterangan, updatedAt
+        id, name, keterangan, updatedAt
     };
 
     updateData(item);

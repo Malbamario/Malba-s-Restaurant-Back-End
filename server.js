@@ -8,6 +8,7 @@ const init = async () => {
     });
 
     server.route(routes);
+    server.connection({ routes: { cors: true } }) 
 
     await server.start();
     console.log(`Server berjalan pada ${server.info.uri}`);
