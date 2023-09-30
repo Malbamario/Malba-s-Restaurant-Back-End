@@ -3,6 +3,7 @@ const { readData, addData, updateData, writeData } = require('./data.js');
 
 const addItemHandler = (request, h) => {
     // const { name, imgUrl, unit, keterangan } = request.payload;
+    console.log(request.payload);
     const { name, unit, keterangan } = request.payload;
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
