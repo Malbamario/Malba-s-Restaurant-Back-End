@@ -6,7 +6,11 @@ const init = async () => {
         host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
         port: 5000,
         "routes": {
-            "cors": true
+            "cors": {
+                "origin": ["*"],
+                "headers": ["Accept", "Content-Type"],
+                "additionalHeaders": ["X-Requested-With"]
+            }
         }
     });
 

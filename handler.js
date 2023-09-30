@@ -3,8 +3,8 @@ const { readData, addData, updateData, writeData } = require('./data.js');
 
 const addItemHandler = (request, h) => {
     // const { name, imgUrl, unit, keterangan } = request.payload;
-    console.log(request.payload);
     const { name, unit, keterangan } = request.payload;
+    console.log(typeof request.payload);
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
@@ -16,6 +16,8 @@ const addItemHandler = (request, h) => {
     const item = {
         id, name, unit, keterangan, createdAt, updatedAt
     };
+
+    console.log(item);
 
     addData(item);
     const response = h.response({
