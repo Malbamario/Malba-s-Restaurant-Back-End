@@ -49,16 +49,16 @@ const getItemHandler = (request, h) => {
 }
 
 const updateItemHandler = (request, h) => {
-    // const { id, name, imgUrl, keterangan } = request.payload;
-    const { id, name, keterangan } = request.payload;
+    // const { id, name, unit, imgUrl, keterangan } = request.payload;
+    const { id, name, unit, keterangan } = request.payload;
     const updatedAt = new Date().toISOString();
 
     // const item = {
-    //     id, name, imgUrl, keterangan, updatedAt
+    //     id, name, unit, imgUrl, keterangan, updatedAt
     // };
 
     const item = {
-        id, name, keterangan, updatedAt
+        id, name, unit, keterangan, updatedAt
     };
 
     updateData(item);
