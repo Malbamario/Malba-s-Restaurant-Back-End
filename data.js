@@ -32,14 +32,14 @@ const updateData = (newItem=undefined, item_trans=undefined) => {
         data.items.forEach((item, index) => {
             if(newItem.id===item.id){
                 data.items[index] = newItem;
-                data.items[index].createdAt = item.createdAt;;
+                data.items[index].createdAt = item.createdAt;
             }
         });
     }
 
     if(item_trans){
         data.items_trans.forEach((item, index) => {
-            if(item.id===item_trans.id) {
+            if(item.idItem===item_trans.idItem) {
                 data.items_trans[index] = item_trans;
                 data.items_trans[index].createdAt = item.createdAt;
             }

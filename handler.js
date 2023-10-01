@@ -32,7 +32,7 @@ const getItemHandler = (request, h) => {
     data.items.forEach((item, index) => {
         let amount = 0;
         data.items_trans.forEach(element => {
-            if(item.id===element.itemId) amount+=parseInt(element.amount);
+            if(item.id===element.idItem) amount+=parseInt(element.amount);
         });
         item.amount = amount;
         data.items[index] = item;
