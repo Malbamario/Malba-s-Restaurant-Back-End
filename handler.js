@@ -16,8 +16,6 @@ const addItemHandler = (request, h) => {
         id, name, unit, keterangan, createdAt, updatedAt
     };
 
-    console.log(item);
-
     addData(item);
     const response = h.response({
         status: 'success',
@@ -34,7 +32,7 @@ const getItemHandler = (request, h) => {
     data.items.forEach((item, index) => {
         let amount = 0;
         data.items_trans.forEach(element => {
-            amount+=parseInt(element.amount);
+            if(item.id===element.itemId) amount+=parseInt(element.amount);
         });
         item.amount = amount;
         data.items[index] = item;
