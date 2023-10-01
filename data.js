@@ -31,8 +31,8 @@ const updateData = (newItem=undefined, item_trans=undefined) => {
     if(newItem){
         data.items.forEach((item, index) => {
             if(newItem.id===item.id){
-                item.createdAt = item.createdAt;
-                data.items[index] = item;
+                data.items[index] = newItem;
+                data.items[index].createdAt = item.createdAt;;
             }
         });
     }
@@ -40,8 +40,8 @@ const updateData = (newItem=undefined, item_trans=undefined) => {
     if(item_trans){
         data.items_trans.forEach((item, index) => {
             if(item.id===item_trans.id) {
-                item_trans.createdAt = item.createdAt;
                 data.items_trans[index] = item_trans;
+                data.items_trans[index].createdAt = item.createdAt;
             }
         });
     }
