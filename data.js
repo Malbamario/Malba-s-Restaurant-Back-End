@@ -26,11 +26,11 @@ const addData = (item=undefined, item_trans=undefined) => {
     return writeData(data);
 }
 
-const updateData = (item=undefined, item_trans=undefined) => {
+const updateData = (newItem=undefined, item_trans=undefined) => {
     const data = readData();
-    if(item){
+    if(newItem){
         data.items.forEach((item, index) => {
-            if(item.id===item.id){
+            if(newItem.id===item.id){
                 item.createdAt = item.createdAt;
                 data.items[index] = item;
             }
